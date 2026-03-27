@@ -130,9 +130,9 @@ def evaluate_action(board: Board, pieces: List[Piece],
         if GameRules.get_legal_placements(new_board, p)
     )
 
-    # 5. 消行奖励（核心！）
+    # 5. 消行奖励（核心！）- 提升权重以匹配 4379 版本
     if clear_bonus > 0:
-        clear_score = clear_bonus * 100.0  # 消行=立即+800分
+        clear_score = clear_bonus * 200.0  # 从 100 → 200
     else:
         clear_score = 0.0
 
@@ -147,13 +147,14 @@ def evaluate_action(board: Board, pieces: List[Piece],
     # 8. 边缘奖励（放在边缘更有利于消行）
     edge_bonus = _calculate_edge_bonus(board, piece, row, col)
 
+    # 9. 综合评分 - 调整权重
     total = (
         placement_score * 1.0 +
-        future_eval * 1.5 +
+        future_eval * 2.0 +        # 从 1.5 → 2.0
         clear_score +
-        clear_progress_bonus +
+        clear_progress_bonus * 1.5 +  # 增加 clear progress 权重
         survivable * 10.0 +
-        edge_bonus -
+        edge_bonus * 2.0 -         # 从 1.0 → 2.0
         block_penalty
     )
 
