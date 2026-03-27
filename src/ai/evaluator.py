@@ -144,12 +144,16 @@ def evaluate_action(board: Board, pieces: List[Piece],
     # 7. 检查是否会「阻塞」接近完成的行/列（惩罚！）
     block_penalty = _calculate_block_penalty(board, new_board, piece, row, col)
 
+    # 8. 边缘奖励（放在边缘更有利于消行）
+    edge_bonus = _calculate_edge_bonus(board, piece, row, col)
+
     total = (
         placement_score * 1.0 +
         future_eval * 1.5 +
         clear_score +
         clear_progress_bonus +
-        survivable * 10.0 -
+        survivable * 10.0 +
+        edge_bonus -
         block_penalty
     )
 
@@ -182,6 +186,28 @@ def _calculate_block_penalty(board: Board, new_board: Board,
             penalty += (filled_before - filled_after) * 5.0
 
     return penalty
+
+
+def _calculate_edge_bonus(board: Board, piece: Piece, row: int, col: int) -> float:
+    """
+    计算边缘放置奖励
+    放在边缘（行首、行尾、列首、列尾）更有利于消行
+    """
+    cells = piece.get_cells(row, col)
+    edge_bonus = 0.0
+
+    for r, c in cells:
+        # 4条边
+        if r == 0 or r == board.size - 1:
+            edge_bonus += 1.0
+        if c == 0 or c == board.size - 1:
+            edge_bonus += 1.0
+
+        # 4个角额外奖励
+        if (r == 0 or r == board.size - 1) and (c == 0 or c == board.size - 1):
+            edge_bonus += 0.5
+
+    return edge_bonus
 
 
 if __name__ == "__main__":
