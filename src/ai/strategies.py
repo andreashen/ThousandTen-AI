@@ -5,44 +5,50 @@
 
 from typing import Dict, Any
 from src.ai.decision import DecisionMaker
-from src.ai.evaluator import Evaluator
 
 
-# 策略版本配置
+# 策略版本配置 - 通过参数差异实现
 STRATEGIES = {
     "v1.0": {
         "name": "Baseline (Initial)",
-        "description": "初始版本，基础评估函数",
-        "evaluator_params": {},
-        "decision_params": {"use_long_bar_strategy": False},
-    },
-
-    "v1.1": {
-        "name": "Clear Focused",
-        "description": "消行优先策略",
-        "evaluator_params": {},
-        "decision_params": {"use_long_bar_strategy": False},
+        "description": "初始版本，基础评估",
+        "decision_params": {
+            "use_long_bar_strategy": False,
+            "time_limit": 1.0,
+        },
+        "evaluator_weights": {
+            "clear_weight": 100.0,
+            "future_eval_weight": 1.5,
+            "edge_bonus_weight": 1.0,
+        }
     },
 
     "v1.2": {
         "name": "Clear Priority",
         "description": "Clear Priority + 序列评估",
-        "evaluator_params": {},
-        "decision_params": {"use_long_bar_strategy": False},
-    },
-
-    "v1.3": {
-        "name": "Edge Bonus",
-        "description": "Clear Priority + 边缘奖励",
-        "evaluator_params": {},
-        "decision_params": {"use_long_bar_strategy": False},
+        "decision_params": {
+            "use_long_bar_strategy": False,
+            "time_limit": 1.0,
+        },
+        "evaluator_weights": {
+            "clear_weight": 150.0,
+            "future_eval_weight": 2.0,
+            "edge_bonus_weight": 1.0,
+        }
     },
 
     "v1.4": {
         "name": "Enhanced Weights",
         "description": "Enhanced Weights（当前最佳）",
-        "evaluator_params": {},
-        "decision_params": {"use_long_bar_strategy": False},
+        "decision_params": {
+            "use_long_bar_strategy": False,
+            "time_limit": 1.0,
+        },
+        "evaluator_weights": {
+            "clear_weight": 200.0,
+            "future_eval_weight": 2.0,
+            "edge_bonus_weight": 2.0,
+        }
     },
 }
 
@@ -64,7 +70,13 @@ class StrategyFactory:
         params = STRATEGIES[version]["decision_params"].copy()
         params["time_limit"] = time_limit
 
-        return DecisionMaker(**params)
+        dm = DecisionMaker(**params)
+
+        # 存储策略特定的权重
+        dm.strategy_version = version
+        dm.strategy_weights = STRATEGIES[version]["evaluator_weights"].copy()
+
+        return dm
 
     @staticmethod
     def get_strategy_info(version: str) -> Dict[str, Any]:
@@ -89,3 +101,4 @@ if __name__ == "__main__":
     print("\n创建 v1.4 决策器:")
     dm = StrategyFactory.create_decision_maker("v1.4")
     print(f"  创建成功: {type(dm).__name__}")
+    print(f"  策略权重: {dm.strategy_weights}")

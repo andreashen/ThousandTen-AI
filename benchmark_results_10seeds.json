@@ -1,0 +1,308 @@
+{
+  "v1.0": [
+    {
+      "seed": 42,
+      "score": 5965,
+      "clears": 296,
+      "rounds": 271,
+      "moves": 812,
+      "time": 40.24209475517273,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 123,
+      "score": 2460,
+      "clears": 121,
+      "rounds": 117,
+      "moves": 349,
+      "time": 18.633361101150513,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 456,
+      "score": 3548,
+      "clears": 175,
+      "rounds": 163,
+      "moves": 488,
+      "time": 24.50853991508484,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 789,
+      "score": 4948,
+      "clears": 245,
+      "rounds": 226,
+      "moves": 677,
+      "time": 30.091506242752075,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 101112,
+      "score": 2631,
+      "clears": 130,
+      "rounds": 122,
+      "moves": 365,
+      "time": 18.694987058639526,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 202223,
+      "score": 2868,
+      "clears": 142,
+      "rounds": 128,
+      "moves": 383,
+      "time": 17.967318058013916,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 303334,
+      "score": 581,
+      "clears": 27,
+      "rounds": 27,
+      "moves": 80,
+      "time": 3.87837815284729,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 404445,
+      "score": 6620,
+      "clears": 329,
+      "rounds": 302,
+      "moves": 905,
+      "time": 43.12709307670593,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 505556,
+      "score": 2280,
+      "clears": 112,
+      "rounds": 106,
+      "moves": 317,
+      "time": 16.28640103340149,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    },
+    {
+      "seed": 606667,
+      "score": 5911,
+      "clears": 294,
+      "rounds": 262,
+      "moves": 785,
+      "time": 33.95808386802673,
+      "strategy": "Baseline (Initial)",
+      "strategy_version": "v1.0"
+    }
+  ],
+  "v1.2": [
+    {
+      "seed": 42,
+      "score": 5965,
+      "clears": 296,
+      "rounds": 271,
+      "moves": 812,
+      "time": 40.027976989746094,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 123,
+      "score": 2460,
+      "clears": 121,
+      "rounds": 117,
+      "moves": 349,
+      "time": 18.591798782348633,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 456,
+      "score": 3548,
+      "clears": 175,
+      "rounds": 163,
+      "moves": 488,
+      "time": 24.352073192596436,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 789,
+      "score": 4948,
+      "clears": 245,
+      "rounds": 226,
+      "moves": 677,
+      "time": 29.915088891983032,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 101112,
+      "score": 2631,
+      "clears": 130,
+      "rounds": 122,
+      "moves": 365,
+      "time": 18.622545957565308,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 202223,
+      "score": 2868,
+      "clears": 142,
+      "rounds": 128,
+      "moves": 383,
+      "time": 17.98176097869873,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 303334,
+      "score": 581,
+      "clears": 27,
+      "rounds": 27,
+      "moves": 80,
+      "time": 3.846191167831421,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 404445,
+      "score": 6620,
+      "clears": 329,
+      "rounds": 302,
+      "moves": 905,
+      "time": 43.17517614364624,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 505556,
+      "score": 2280,
+      "clears": 112,
+      "rounds": 106,
+      "moves": 317,
+      "time": 16.273990869522095,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    },
+    {
+      "seed": 606667,
+      "score": 5911,
+      "clears": 294,
+      "rounds": 262,
+      "moves": 785,
+      "time": 33.93700289726257,
+      "strategy": "Clear Priority",
+      "strategy_version": "v1.2"
+    }
+  ],
+  "v1.4": [
+    {
+      "seed": 42,
+      "score": 5965,
+      "clears": 296,
+      "rounds": 271,
+      "moves": 812,
+      "time": 40.04105806350708,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 123,
+      "score": 2460,
+      "clears": 121,
+      "rounds": 117,
+      "moves": 349,
+      "time": 18.603293895721436,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 456,
+      "score": 3548,
+      "clears": 175,
+      "rounds": 163,
+      "moves": 488,
+      "time": 24.413839101791382,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 789,
+      "score": 4948,
+      "clears": 245,
+      "rounds": 226,
+      "moves": 677,
+      "time": 29.981863975524902,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 101112,
+      "score": 2631,
+      "clears": 130,
+      "rounds": 122,
+      "moves": 365,
+      "time": 18.594146013259888,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 202223,
+      "score": 2868,
+      "clears": 142,
+      "rounds": 128,
+      "moves": 383,
+      "time": 18.05468487739563,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 303334,
+      "score": 581,
+      "clears": 27,
+      "rounds": 27,
+      "moves": 80,
+      "time": 3.8605809211730957,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 404445,
+      "score": 6620,
+      "clears": 329,
+      "rounds": 302,
+      "moves": 905,
+      "time": 43.118077993392944,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 505556,
+      "score": 2280,
+      "clears": 112,
+      "rounds": 106,
+      "moves": 317,
+      "time": 16.28855586051941,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    },
+    {
+      "seed": 606667,
+      "score": 5911,
+      "clears": 294,
+      "rounds": 262,
+      "moves": 785,
+      "time": 33.972431898117065,
+      "strategy": "Enhanced Weights",
+      "strategy_version": "v1.4"
+    }
+  ]
+}
