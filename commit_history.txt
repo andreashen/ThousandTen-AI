@@ -1,0 +1,21 @@
+52dee23 [docs] Add README.md with quick start guide
+8fc1642 [docs] Add M1_COMPLETION_REPORT: all 8 tasks done, 517% complete
+9d00677 [infra] Add 10-seed comparison test and FINAL_REPORT
+1c05061 [docs] Create v2 documentation and archive v1 docs
+83534a5 [infra] Add reproducible benchmark system and strategy library
+afced62 [docs] Add 30-game statistics: score/clears ratio = 20.3
+0b6ac2f [docs] Document failed optimization attempts for 10000 avg goal
+228ccf7 [docs] Add OPTIMIZATION_SUMMARY.md: 42.4x improvement overview
+086f735 [docs] Update experiments with enhanced weights breakthrough: 42.4x improvement
+05bb5d9 [breakthrough] Enhanced weights: 2977 -> 5172 avg (1.7x), max 13177!
+2c47c8c [docs] Update experiments with Edge Bonus results: 24.4x improvement
+0855e4e [optimize] Add edge bonus: 2060 -> 2977 avg (1.4x)
+f473b82 [docs] Add clear statistics: 11441 score = 570 clears formula
+9b780bd [docs] Update experiments.md with Clear Priority results
+431e98f [optimize] Clear priority strategy: 1200 -> 2060 avg (1.7x)
+19b9071 [experiment] Document AI optimization progress: 2422 avg achieved
+01d2cb8 [experiment] AI scoring: 122 -> 1478 avg (12x) via clear-focused heuristics
+7cc8821 [update] plan
+66f3707 Complete M1: AI Bot with Pygame visualization
+5bcdb1f Implement game engine core (M1)
+b191fb0 Initialize project with M1 milestone plan
