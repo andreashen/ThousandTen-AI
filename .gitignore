@@ -44,3 +44,9 @@ htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# log
+log/
+logs/
+*.log
+
